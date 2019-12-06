@@ -14,7 +14,22 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <h3>Your listings</h3>
+                   @if (count($listings))
+                       <table class="table table-striped">
+                            <tr>
+                                <th>Company</th>
+                            </tr>
+                            @foreach ($listings as $listing)
+                               <tr>
+                                    <td>{{$listing->name}}</td>
+                                </tr> 
+                            @endforeach  
+                       </table>
+                       @else
+                       <p>You don't have any listings yet</p>
+                   @endif
+                   
                 </div>
             </div>
         </div>
