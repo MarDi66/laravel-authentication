@@ -24,6 +24,14 @@
                             <tr>
                                 <td>{{$listing->name}}</td>
                             <td><a href="/listings/{{$listing->id}}/edit" class="btn btn-info float-right">Edit</a></td>
+
+                            <td>
+                                <form action="/listings/{{$listing->id}}" method="post">@csrf
+                                @method('DELETE')
+                                <button type="submit" name="button" class="btn btn-danger">Delete</button>
+                                </form>    
+                            </td>
+                            
                             </tr> 
                         @endforeach  
                     </table>
