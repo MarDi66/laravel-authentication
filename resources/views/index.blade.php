@@ -13,7 +13,7 @@
                     <div class="list-group">
                         @foreach ($listings as $listing)
                         <div class="list-group-item">
-                            {{$listing->name}}
+                        <a href="listings/{{$listing->id}}">{{$listing->name}}</a>
                         </div>
                         @endforeach  
                     </div>
