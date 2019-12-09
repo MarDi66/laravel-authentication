@@ -15,7 +15,9 @@ class ListingsController extends Controller
      */
     public function index()
     {
-        //
+        $listings = Listing::orderBy('created_at', 'desc')->get();
+
+        return view('index')->with('listings', $listings);
     }
 
     /**
