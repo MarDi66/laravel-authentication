@@ -17,7 +17,8 @@
                     </div>
                 </div>
 
-                <form>
+                <form method="POST" action="/listings">
+                    @csrf
                     <div class="form-group">
                         <label for="name">Enter your name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
